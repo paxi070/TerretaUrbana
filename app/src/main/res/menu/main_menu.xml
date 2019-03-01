@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_discover"
+            android:icon="@drawable/ic_menu_discover"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/nav_scheduble"
+            android:icon="@drawable/ic_menu_horario"
+            android:title="@string/schedule" />
+
+        <item
+            android:id="@+id/nav_results"
+            android:icon="@drawable/ic_menu_podio"
+            android:title="@string/results" />
+
+        <item
+            android:id="@+id/nav_artists"
+            android:icon="@drawable/ic_menu_artist"
+            android:title="@string/artists" />
+
+        <item
+            android:id="@+id/nav_maps"
+            android:icon="@drawable/ic_menu_maps"
+            android:title="@string/maps"/>
+
+    </group>
+
+</menu>
