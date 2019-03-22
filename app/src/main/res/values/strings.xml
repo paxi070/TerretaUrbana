@@ -13,4 +13,12 @@
     <string name="artists">Artists/Staff</string>
     <string name="maps">Maps</string>
     <string name="results">Results</string>
+    <string name="choreo">Choreo</string>
+    <string name="battles">Battles</string>
+
+    <string name="abril27">APR 27 SAT</string>
+    <string name="abril28">APR 28 SUN</string>
+    <string name="mayo10">MAY 10 FRI</string>
+    <string name="mayo11">MAY 11 SAT</string>
+    <string name="mayo12">MAY 12 SUN</string>
 </resources>
