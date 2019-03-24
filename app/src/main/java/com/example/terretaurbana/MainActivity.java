@@ -20,6 +20,7 @@ import com.example.terretaurbana.Menu.FragmentResultados;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener
 {
+    public static final String notificacionChannelID = "com.example.terretaurbana.test";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
