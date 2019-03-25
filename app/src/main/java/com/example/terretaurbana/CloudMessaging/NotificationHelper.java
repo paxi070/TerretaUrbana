@@ -16,7 +16,7 @@ public class NotificationHelper
         notificationBuilder.setAutoCancel(true)
                 .setDefaults(Notification.DEFAULT_ALL)
                 .setWhen(System.currentTimeMillis())
-                .setSmallIcon(R.drawable.ic_launcher_background)
+                .setSmallIcon(R.mipmap.ic_fondo)
                 .setContentTitle(title)
                 .setContentText(body)
                 .setContentInfo("Info")

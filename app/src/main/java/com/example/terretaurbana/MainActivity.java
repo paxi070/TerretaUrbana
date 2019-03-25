@@ -16,6 +16,7 @@ import com.example.terretaurbana.Menu.FragmentHorario;
 import com.example.terretaurbana.Menu.FragmentInicio;
 import com.example.terretaurbana.Menu.FragmentMaps;
 import com.example.terretaurbana.Menu.FragmentResultados;
+import com.google.firebase.FirebaseApp;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener
@@ -27,6 +28,9 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FirebaseApp.initializeApp(this);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -38,6 +42,9 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.contenedor, new FragmentInicio()).commit();
     }
 
     @Override
