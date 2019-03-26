@@ -1,5 +1,6 @@
 package com.example.terretaurbana.Menu;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -27,6 +28,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class FragmentArtistsStaff extends Fragment
 {
@@ -74,6 +77,20 @@ public class FragmentArtistsStaff extends Fragment
 
     private void cargarEventosFireBase()
     {
+        final ProgressDialog progressDialog = new ProgressDialog(getContext());
+        progressDialog.setMessage("Loading...");
+        progressDialog.show();
+
+        final Timer t = new Timer();
+        t.schedule(new TimerTask()
+        {
+           public void run()
+           {
+               progressDialog.dismiss();
+               t.cancel();
+           }
+        }, 2000);
+
         valueEventListener = new ValueEventListener()
         {
             @Override

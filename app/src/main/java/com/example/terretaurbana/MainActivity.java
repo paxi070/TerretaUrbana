@@ -15,7 +15,8 @@ import com.example.terretaurbana.Menu.FragmentArtistsStaff;
 import com.example.terretaurbana.Menu.FragmentHorario;
 import com.example.terretaurbana.Menu.FragmentInicio;
 import com.example.terretaurbana.Menu.FragmentMaps;
-import com.example.terretaurbana.Menu.FragmentResultados;
+import com.example.terretaurbana.Menu.FragmentResultadosBattle;
+import com.example.terretaurbana.Menu.FragmentResultadosCoreo;
 import com.google.firebase.FirebaseApp;
 
 public class MainActivity extends AppCompatActivity
@@ -96,10 +97,16 @@ public class MainActivity extends AppCompatActivity
 
         FragmentManager fragmentManager = getSupportFragmentManager();
 
-        if (id == R.id.nav_results)
+        if (id == R.id.nav_resultscoreo)
         {
             fragmentManager.beginTransaction().replace(
-                    R.id.contenedor, new FragmentResultados()).commit();
+                    R.id.contenedor, new FragmentResultadosCoreo()).commit();
+        }
+
+        if (id == R.id.nav_resultsbattle)
+        {
+            fragmentManager.beginTransaction().replace(
+                    R.id.contenedor, new FragmentResultadosBattle()).commit();
         }
 
         if (id == R.id.nav_maps)

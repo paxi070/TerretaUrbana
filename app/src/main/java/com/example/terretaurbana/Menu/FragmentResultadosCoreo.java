@@ -10,10 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.terretaurbana.Menu.TabsResultados.PageAdapterResultados;
+import com.example.terretaurbana.Menu.TabsHorario.PageAdapterHorario;
 import com.example.terretaurbana.R;
 
-public class FragmentResultados extends Fragment
+public class FragmentResultadosCoreo extends Fragment
 {
     DrawerLayout drawerLayout;
     Toolbar toolbar;
@@ -22,7 +22,7 @@ public class FragmentResultados extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        View view = inflater.inflate(R.layout.fragment_menu_resultados, container, false);
+        View view = inflater.inflate(R.layout.fragment_menu_resultados_coreo, container, false);
 
         drawerLayout = (DrawerLayout) view.findViewById(R.id.drawerLayout);
         //toolbar = (Toolbar) view.findViewById(R.id.toolBar);
@@ -34,11 +34,13 @@ public class FragmentResultados extends Fragment
         //actionBar.setDisplayHomeAsUpEnabled(true);
 
         tabs = (TabLayout) view.findViewById(R.id.tablayout);
-        tabs.addTab(tabs.newTab().setText("Choreo"));
-        tabs.addTab(tabs.newTab().setText("Battles"));
+        tabs.addTab(tabs.newTab().setText("INFANTIL"));
+        tabs.addTab(tabs.newTab().setText("JUNIOR"));
+        tabs.addTab(tabs.newTab().setText("ABSOLUTA"));
+        tabs.addTab(tabs.newTab().setText("PAREJAS"));
 
         final ViewPager mviewPager = (ViewPager) view.findViewById(R.id.viewpager);
-        final PageAdapterResultados adapter = new PageAdapterResultados(getFragmentManager(), tabs.getTabCount());
+        final PageAdapterHorario adapter = new PageAdapterHorario(getFragmentManager(), tabs.getTabCount());
         mviewPager.setAdapter(adapter);
         mviewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabs));
 

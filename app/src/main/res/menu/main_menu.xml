@@ -16,9 +16,14 @@
             android:title="@string/schedule" />
 
         <item
-            android:id="@+id/nav_results"
+            android:id="@+id/nav_resultscoreo"
             android:icon="@drawable/ic_menu_podio"
-            android:title="@string/results" />
+            android:title="@string/resultscoreo" />
+
+        <item
+            android:id="@+id/nav_resultsbattle"
+            android:icon="@drawable/ic_menu_template"
+            android:title="@string/resultsbattle" />
 
         <item
             android:id="@+id/nav_artists"
